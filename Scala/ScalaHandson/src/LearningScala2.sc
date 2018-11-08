@@ -71,5 +71,27 @@ object LearningScala2 {
 	 // This is the sequence where every number is the sum of the two numbers before it.
 	 // So, the result should be 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 	 
+	 def fibonacci(i:Int): Int ={
+	  
+	  if(i <= 0)
+	   return 0;
+	  if(i == 1)
+	   return 1;
+	   
+	     return fibonacci(i-1) + fibonacci(i-2);
+	 }                                        //> fibonacci: (i: Int)Int
+	 
+	 for(i <-0 to 9){
+	   println(fibonacci(i));                 //> 0
+                                                  //| 1
+                                                  //| 1
+                                                  //| 2
+                                                  //| 3
+                                                  //| 5
+                                                  //| 8
+                                                  //| 13
+                                                  //| 21
+                                                  //| 34
+	 }
 	   
 }
